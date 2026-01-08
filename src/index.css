@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* Global reset & dark base */
+html,
+body {
+  background-color: #05070d;
+  color: #e5e7eb;
+  scroll-behavior: smooth;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Selection glow */
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+}
+
+@keyframes lightning {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-lightning {
+  animation: lightning 1.8s linear infinite;
+}
